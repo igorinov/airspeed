@@ -14,6 +14,7 @@ char digits[] = "0123456789ABCDEF";
 byte data[16];
 byte message[64];
 long t, t0;
+byte prom_sent = 0;
 
 void setup()
 {
@@ -67,22 +68,20 @@ void read_prom()
   Serial.write(message, i);
 }
 
-byte prom_sent = 0;
-
 void loop()
 {
   int n = 0;
   int k;
 
   while (!Serial) {
-    t0 = millis();
     prom_sent = 0;
   }
 
   if (!prom_sent) {
     read_prom();
     prom_sent = 1;
-    delay(125);
+    delay(PERIOD_MS);
+    t0 = millis();
   }
   
   do {
