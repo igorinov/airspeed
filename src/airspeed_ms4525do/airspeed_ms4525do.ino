@@ -1,6 +1,8 @@
 #define I2C_HARDWARE 1
 #include <SoftI2CMaster.h>
 
+#define PERIOD_MS 40
+
 // 4525DO-DS5AI-001D
 byte address = 0x28 << 1;
 
@@ -26,8 +28,8 @@ void loop()
   
   do {
     t = millis();
-  } while (t - t0 < 40);
-  t0 = t;
+  } while (t - t0 < PERIOD_MS);
+  t0 += PERIOD_MS;
 
   if (!i2c_start(address))
     return;

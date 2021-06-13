@@ -31,7 +31,7 @@ void loop()
   do {
     t = millis();
   } while (t - t0 < PERIOD_MS);
-  t0 = t;
+  t0 += PERIOD_MS;
 
   if (!i2c_start(address))
     return;
