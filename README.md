@@ -9,7 +9,7 @@ Default configuration uses hardware i2c support with standard SDA/SCL pins as ma
 
   - [Honeywell ABP2 Series](https://sps.honeywell.com/us/en/products/sensing-and-iot/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp2-series)
   - [MEAS 4525-DS5A001DP](https://www.te.com/usa-en/product-4525-DS5A001DP.html)
-  - [MEAS 5525DSO-DB001DS](https://www.te.com/usa-en/product-5525DSO-DB001DS.html) (work in progress)
+  - [MEAS 5525DSO-DB001DS](https://www.te.com/usa-en/product-5525DSO-DB001DS.html)
 
 ## Controller board
 
